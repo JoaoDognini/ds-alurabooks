@@ -16,6 +16,8 @@ jobs:
     # The list of steps that the action will go through
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # fetch the complete history to use the user's credentials for pushing
       - name: Prepare repository
         run: git fetch --unshallow --tags
       - name: Use Node.js 18.x
