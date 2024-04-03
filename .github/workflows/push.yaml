@@ -22,6 +22,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
+      - name: Configure Git
+        run: |
+          git config --global user.email "joaootavioazevedo@gmail.com"
+          git config --global user.name "João Dognini"
       - name: Cache node modules
         uses: actions/cache@v2
         with:
